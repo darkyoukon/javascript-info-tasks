@@ -12,6 +12,7 @@
 // Please use nested if blocks. Mind the overall readability of the code.
 
 // Hint: passing an empty input to a prompt returns an empty string ''. Pressing ESC during a prompt returns null.
+"use strict";
 alert("The nineth task:");
 
 const login = prompt("Enter your login:");

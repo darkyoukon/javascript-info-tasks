@@ -1,4 +1,6 @@
 // What is the last value alerted by this code? Why?
+"use strict";
+
 alert("The first task:");
 
 let i = 3;

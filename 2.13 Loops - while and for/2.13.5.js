@@ -3,6 +3,8 @@
 //   alert( `number ${i}!` );
 // }
 //
+"use strict";
+
 alert("The fifth task:");
 
 let i = 0;

@@ -1,6 +1,7 @@
 // Which of these alerts are going to execute?
 
 // What will the results of the expressions be inside if(...)?
+"use strict";
 alert("The eighth task:");
 
 if (-1 || 0) alert("first"); // will be executed

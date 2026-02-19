@@ -9,6 +9,7 @@
 // } else {
 //   message = "";
 // }
+"use strict";
 alert("The fifth task:");
 
 let login = prompt("Enter your current job title:");

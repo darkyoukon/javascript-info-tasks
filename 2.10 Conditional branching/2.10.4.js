@@ -4,6 +4,7 @@
 // } else {
 //   result = 'Over';
 // }
+"use strict";
 alert("The fourth task:");
 
 let a = Number(prompt("Enter the first number"));

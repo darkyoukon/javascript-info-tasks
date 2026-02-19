@@ -9,6 +9,8 @@
 // For n = 10 the result will be 2,3,5,7.
 
 // P.S. The code should work for any n, not be hard-tuned for any fixed value.
+"use strict";
+
 alert("The seventh task:");
 
 const maxValue = Number(
@@ -18,5 +20,6 @@ for (let currentValue = 2; currentValue <= maxValue; ++currentValue) {
   for (let divider = 2; divider <= currentValue; ++divider) {
     if (divider === currentValue) alert(currentValue);
     if (currentValue % divider === 0) break;
+    if (currentValue % 2 === 0) break; // since even number never could be prime
   }
 }

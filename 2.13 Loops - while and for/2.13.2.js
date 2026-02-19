@@ -1,10 +1,12 @@
 // For every loop iteration, write down which value it outputs and then compare it with the solution.
 // Both loops alert the same values, or not?
+"use strict";
+
 alert("The second task:");
 
 // The prefix form ++i:
 let i_1 = 0;
-while (++i_1 < 5) alert(i_2); // will output 1, 2, 3, 4
+while (++i_1 < 5) alert(i_1); // will output 1, 2, 3, 4
 
 // The postfix form i++
 let i_2 = 0;

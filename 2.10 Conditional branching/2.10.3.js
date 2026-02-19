@@ -4,6 +4,7 @@
 // -1, if less than zero,
 // 0, if equals zero.
 // In this task we assume that the input is always a number.
+"use strict";
 alert("The third task:");
 
 const promptedNumber = Number(prompt("Enter a desired Number value: "));

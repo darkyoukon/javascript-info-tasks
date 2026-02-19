@@ -1,4 +1,5 @@
 // Will alert be shown?
+"use strict";
 alert("The first task:");
 
 if ("0") {

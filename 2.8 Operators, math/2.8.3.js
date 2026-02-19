@@ -1,3 +1,6 @@
+// What are results of these expressions?
+// Think well, write down and then compare with the answer.
+"use strict";
 alert("Third task");
 
 alert("" + 1 + 0); // 10
