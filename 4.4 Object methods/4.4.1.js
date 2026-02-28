@@ -8,7 +8,7 @@ function makeUser() {
   return {
     name: "John",
     ref: this,
-    proper_ref() {
+    properRef() {
       return this;
     },
   };
@@ -16,8 +16,8 @@ function makeUser() {
 
 let user = makeUser();
 
-alert(user.proper_ref().name);
-alert(user.proper_ref.name); // outputs just function name
+alert(user.properRef().name);
+alert(user.properRef.name); // outputs just function name
 alert(user.ref.name); // What's the result?
 
 // Actually there won't be any output
