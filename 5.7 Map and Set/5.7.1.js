@@ -6,7 +6,7 @@ console.log("The first task: Filter unique array members");
 // For instance:
 
 function unique(arr) {
-  return Array.from(new Set(arr).values());
+  return Array.from(new Set(arr));
   // return [...new Set(arr).values()];
 }
 

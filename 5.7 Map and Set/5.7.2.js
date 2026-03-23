@@ -27,4 +27,10 @@ function aclean(arr) {
     uniqueValues.set(properValue, value);
   }
   return [...uniqueValues.values()];
+
+  // return Object.values(
+  //   Object.fromEntries(
+  //     arr.map((value) => [value.toLowerCase().split("").sort().join(), value]),
+  //   ),
+  // );
 }
