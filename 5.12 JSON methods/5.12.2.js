@@ -29,6 +29,17 @@ console.log(
     value !== meetup || key === "" ? value : undefined,
   ),
 );
+// console.log(safeStringify(meetup));
+
+// function safeStringify(object) {
+//   const seenObjects = new WeakSet();
+//   return JSON.stringify(object, function replacer(_, value) {
+//     if (typeof value !== "object" || value === null) return value;
+//     if (seenObjects.has(value)) return "[Circular]";
+//     seenObjects.add(value);
+//     return value;
+//   });
+// }
 
 /* result should be:
 {
