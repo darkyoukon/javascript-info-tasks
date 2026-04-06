@@ -23,14 +23,19 @@ function get2DigitDate(number) {
 }
 
 function formatDate(date) {
-  const differenceSeconds = Math.round((Date.now() - date) / 1000);
-  if (differenceSeconds < 1) return "right now";
-  if (differenceSeconds / 60 < 1) return `${differenceSeconds} sec. ago`;
-  if (differenceSeconds / 60 / 60 < 1) {
-    return `${differenceSeconds / 60} min. ago`;
+  const differenceInSeconds = Math.round((Date.now() - date) / 1000);
+
+  if (differenceInSeconds < 1) return "right now";
+  if (differenceInSeconds < 60) return `${differenceInSeconds} sec. ago`;
+  if (differenceInSeconds < 60 * 60) {
+    return `${differenceInSeconds / 60} min. ago`;
   }
-  return `${get2DigitDate(date.getDate())}.\
-${get2DigitDate(date.getMonth() + 1)}.\
-${get2DigitDate(date.getFullYear())} \
-${get2DigitDate(date.getHours())}:${get2DigitDate(date.getMinutes())}`;
+
+  return (
+    `${get2DigitDate(date.getDate())}.` +
+    `${get2DigitDate(date.getMonth() + 1)}.` +
+    `${get2DigitDate(date.getFullYear())} ` +
+    `${get2DigitDate(date.getHours())}:` +
+    `${get2DigitDate(date.getMinutes())}`
+  );
 }
