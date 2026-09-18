@@ -26,7 +26,8 @@ meetup.self = meetup;
 
 console.log(
   JSON.stringify(meetup, (key, value) =>
-    value !== meetup || key === "" ? value : undefined,
+    // value !== meetup || key === "" ? value : undefined,
+    value === meetup && key !== "" ? undefined : value,
   ),
 );
 // console.log(safeStringify(meetup));
