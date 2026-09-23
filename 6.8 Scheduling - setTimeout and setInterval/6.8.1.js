@@ -13,6 +13,9 @@ function output(number, time) {
 // 1. Using setInterval.
 function printNumbersSetInterval(from, to) {
   console.log("setInterval printing:");
+  // setInterval(() => {
+  //   from <= to ? console.log(from++) : clearInterval(timer);
+  // }, 1000);
   const now = Date.now();
 
   output(from++, now);
@@ -47,3 +50,10 @@ setTimeout(
   },
   2 * TIMEOUT_PERIOD * (TO - FROM + 1),
 );
+
+// function printNumbersSetTimeout(from, to) {
+//   if (from > to) return;
+
+//   console.log(from);
+//   setTimeout(printNumbersSetTimeout, 1000, from + 1, to);
+// }
