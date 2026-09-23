@@ -81,10 +81,34 @@ function throttle(f, ms) {
     setTimeout(() => {
       throttled = false;
       if (savedArgs) {
-        f.apply(savedThis, savedArgs);
+        wrapper.apply(savedThis, savedArgs);
         savedArgs = savedThis = null;
       }
     }, ms);
   }
   return wrapper;
 }
+
+// Alternative solution using recursion
+// function throttle(func, ms) {
+//   let timer;
+//   let savedThis, savedArgs;
+//   return function wrapper(...args) {
+//     if (!timer) {
+//       func.apply(this, args);
+//       timer = setTimeout(() => {
+//         timer = null;
+//         if (savedArgs) {
+//           const currentArgs = savedArgs;
+//           const currentThis = savedThis;
+
+//           savedArgs = savedThis = null; // Clear first, then call
+//           wrapper.apply(currentThis, currentArgs);
+//         }
+//       }, ms);
+//     } else {
+//       savedThis = this;
+//       savedArgs = args;
+//     }
+//   };
+// }

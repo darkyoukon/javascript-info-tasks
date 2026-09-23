@@ -52,6 +52,7 @@ function debounce(f, ms) {
   // let lastCallTime;
   function wrapper(output) {
     // if (lastCallTime && lastCall && Date.now() - lastCallTime < ms)
+    // if(lastCall) clearTimeout(lastCall); lastCall = null;
     clearTimeout(lastCall);
     // lastCallTime = Date.now();
     lastCall = setTimeout(() => f.call(this, output), ms);
