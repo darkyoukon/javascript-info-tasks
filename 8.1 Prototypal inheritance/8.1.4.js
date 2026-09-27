@@ -7,7 +7,8 @@ console.log("The fourth task: Why are both hamsters full?");
 
 let hamster = {
   eat(food) {
-    this.stomach = [];
+    // this.stomach ??= [];
+    if (!this.stomach) this.stomach = [];
     this.stomach.push(food);
   },
 };
