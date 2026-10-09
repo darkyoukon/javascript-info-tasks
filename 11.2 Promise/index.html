@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11.2 Promise</title>
+    <style>
+      .circle {
+        transition-property: width, height;
+        transition-duration: 2s;
+        position: fixed;
+        transform: translateX(-50%) translateY(-50%);
+        background-color: red;
+        border-radius: 50%;
+
+        width: 0;
+        height: 0;
+      }
+      .message-ball {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+    <script type="module" src="11.2.1.js"></script>
+    <script type="module" src="11.2.2.js"></script>
+    <script src="11.2.3.js"></script>
+  </head>
+  <body>
+    <div>The third task: Animated circle with Promise</div>
+    <!-- Animated circle -->
+    <button id="circleAnimate" onclick="showCircle(150, 150, 100)">
+      showCircle(150, 150, 100)
+    </button>
+    <div class="circle"></div>
+
+    <!-- Animated circle with callback -->
+    <button
+      id="circleAnimate2"
+      onclick="
+        showCircleCallback(150, 350, 100, (div) => {
+          div.classList.add('message-ball');
+          div.append('Hello, world!');
+        })
+      "
+    >
+      showCircleCallback(150, 350, 100)
+    </button>
+
+    <!-- Animated circle with promise -->
+    <button
+      id="circleAnimate3"
+      onclick="
+        showCirclePromise(150, 550, 100).then((div) => {
+          div.classList.add('message-ball');
+          div.append('Hello, world!');
+        })
+      "
+    >
+      showCircleCallback(150, 550, 100)
+    </button>
+  </body>
+</html>
